@@ -50,9 +50,9 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 3. Configure a connection string do PostgreSQL:
    - Crie um banco de dados no PostgreSQL (ex: `brain_agriculture`).
    - Defina a connection string no arquivo `.env`. Exemplo:
-     ```env
+   ```bash
     DATABASE_URL=postgres://seu_usuario:sua_senha@localhost:5432/brain_agriculture
-     ```
+   ```
 
 4. Execute as migrações e seeds para criar e popular as tabelas:
    - **Migrations**: Cria as tabelas no banco de dados.
