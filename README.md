@@ -1,3 +1,4 @@
+
 # Cadastro de Produtores Rurais - Backend - Brain Agriculture
 
 Este projeto faz parte de um teste de avaliação para a Brain Agriculture, onde o objetivo é criar a **API Backend** para o cadastro de produtores rurais. O projeto foi desenvolvido utilizando **NodeJS**, **TypeScript** e **PostgreSQL** como banco de dados. A API permite cadastrar, editar, excluir e listar produtores rurais, além de fornecer dados agregados para exibição em um dashboard.
@@ -36,35 +37,35 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 ### Passos
 
 1. Clone o repositório:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/eduardoMichell/brain-agriculture-api.git
    cd brain-agriculture-api
-   \`\`\`
+   ```
 
 2. Instale as dependências:
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 3. Configure a connection string do PostgreSQL:
-   - Crie um banco de dados no PostgreSQL (ex: \`brain_agriculture\`).
-   - Defina a connection string no arquivo \`.env\`. Exemplo:
-     \`\`\`env
+   - Crie um banco de dados no PostgreSQL (ex: `brain_agriculture`).
+   - Defina a connection string no arquivo `.env`. Exemplo:
+     ```env
     DATABASE_URL=postgres://seu_usuario:sua_senha@localhost:5432/brain_agriculture
-     \`\`\`
+     ```
 
 4. Execute as migrações e seeds para criar e popular as tabelas:
    - **Migrations**: Cria as tabelas no banco de dados.
    - **Seeds**: Insere dados de exemplo no banco de dados.
-   \`\`\`bash
+   ```bash
    npm run migrate    
    npm run seed  
-   \`\`\`
+   ```
 
 5. Inicie o servidor:
-   \`\`\`bash
+   ```bash
    npm start
-   \`\`\`
+   ```
 
 ### Docker
 
@@ -72,40 +73,40 @@ Se preferir rodar o projeto com Docker, siga os passos abaixo:
 
 1. Certifique-se de que o Docker está instalado e rodando em sua máquina.
 2. Execute o comando:
-   \`\`\`bash
+   ```bash
    npm run docker:up
-   \`\`\`
+   ```
 3. Para derrubar os containers Docker, execute:
-   \`\`\`bash
+   ```bash
    npm run docker:down
-   \`\`\`
+   ```
 
 ### Arquivos SQL e TypeScript para Seed
 
 O projeto inclui scripts para gerar os dados de produtores rurais:
 
 - **Arquivo SQL**: Um script para criar e popular as tabelas diretamente via PostgreSQL.
-  - Localizado em \`db_init/init.sql\`.
+  - Localizado em `db_init/init.sql`.
   
 - **Script TypeScript**: Um script TypeScript para popular os dados via código.
-  - Localizado em \`src/scripts/seedProdutores.ts\`.
+  - Localizado em `src/scripts/seedProdutores.ts`.
 
 ## Postman
 
 Para facilitar os testes, o projeto contém um arquivo de configuração do **Postman** que pode ser importado diretamente.
 
-- O arquivo para importação está localizado na raiz do projeto com o nome \`brain_agriculture_api.postman_collection.json\`.
+- O arquivo para importação está localizado na raiz do projeto com o nome `brain_agriculture_api.postman_collection.json`.
 
 ## Variáveis de Ambiente
 
-O projeto utiliza variáveis de ambiente para configurar o banco de dados e outras opções. Aqui está um exemplo do arquivo \`.env\`:
+O projeto utiliza variáveis de ambiente para configurar o banco de dados e outras opções. Aqui está um exemplo do arquivo `.env`:
 
-\`\`\`env
+```env
 DATABASE_URL=postgres://seu_usuario:sua_senha@localhost:5432/brain_agriculture
 PORT=3000
 API_URL="http://localhost:3000"
-\`\`\`
+```
 
 ## Deploy Automático
 
-O projeto também está configurado para deploy automático no Heroku via GitHub Actions. Para cada push na branch \`master\`, a aplicação será automaticamente publicada no Heroku.
+O projeto também está configurado para deploy automático no Heroku via GitHub Actions. Para cada push na branch `main`, a aplicação será automaticamente publicada no Heroku.
