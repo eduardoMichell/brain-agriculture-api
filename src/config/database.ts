@@ -1,6 +1,7 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
 import AppError from '../utils/AppError';
+const isProduction = process.env.NODE_ENV === 'production';
 
 dotenv.config();
 
@@ -10,9 +11,9 @@ class Database {
   constructor() {
     this.pool = new Pool({
       connectionString: process.env.DATABASE_URL,
-      ssl: {
-        rejectUnauthorized: false
-      }
+      ssl: isProduction
+        ? { rejectUnauthorized: false }
+        : false,
     });
   }
 

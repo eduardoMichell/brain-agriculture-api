@@ -7,7 +7,7 @@ services:
     ports:
       - "${PORT}:${PORT}"
     environment:
-      - DATABASE_URL=${DATABASE_URL}
+      - DATABASE_URL=postgres://admin:admin@db:5432/brain_agriculture
       - PORT=${PORT}
     depends_on:
       - db 
