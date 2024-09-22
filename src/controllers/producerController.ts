@@ -22,6 +22,7 @@ class ProducerController {
   * /api/produtores:
   *   post:
   *     summary: Cria um novo produtor
+  *     tags: [Producer]
   *     requestBody:
   *       required: true
   *       content:
@@ -55,6 +56,7 @@ class ProducerController {
    * /api/produtores:
    *   get:
    *     summary: Lista todos os produtores
+   *     tags: [Producer]
    *     responses:
    *       200:
    *         description: Lista de produtores
@@ -82,6 +84,7 @@ class ProducerController {
    * /api/produtores/{id}:
    *   get:
    *     summary: Busca um produtor por ID
+   *     tags: [Producer]
    *     parameters:
    *       - name: id
    *         in: path
@@ -121,6 +124,7 @@ class ProducerController {
    * /api/produtores/{id}:
    *   put:
    *     summary: Atualiza um produtor por ID
+   *     tags: [Producer]
    *     parameters:
    *       - name: id
    *         in: path
@@ -158,6 +162,7 @@ class ProducerController {
    * /api/produtores/{id}:
    *   delete:
    *     summary: Deleta um produtor por ID
+   *     tags: [Producer]
    *     parameters:
    *       - name: id
    *         in: path
@@ -185,6 +190,7 @@ class ProducerController {
    * /api/produtores/dashboard:
    *   get:
    *     summary: Retorna dados do dashboard
+   *     tags: [Producer]
    *     responses:
    *       200:
    *         description: Dados do dashboard

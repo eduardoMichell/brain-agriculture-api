@@ -28,7 +28,7 @@ jobs:
           echo "machine git.heroku.com" >> ~/.netrc
           echo "  login _" >> ~/.netrc
           echo "  password $HEROKU_API_KEY" >> ~/.netrc
-          docker login --username=_ --password="$HEROKU_API_KEY" registry.heroku.com
+          docker login --username=_ --password-stdin="$HEROKU_API_KEY" registry.heroku.com
 
       - name: Build e Push Docker Image para Heroku
         run: |
