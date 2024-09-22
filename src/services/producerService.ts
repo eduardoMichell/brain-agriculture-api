@@ -13,16 +13,34 @@ class ProducerService {
 
   private validateCulturas(culturas: string[]): void {
     const validCulturas = Object.values(Culturas);
+    const culturaSet = new Set<string>();  // Armazenar culturas únicas
     const invalidCulturas: string[] = [];
+    const duplicatedCulturas: string[] = [];
 
     for (const cultura of culturas) {
       if (!validCulturas.includes(cultura as Culturas)) {
         invalidCulturas.push(cultura);
       }
+
+      if (culturaSet.has(cultura)) {
+        duplicatedCulturas.push(cultura);
+      } else {
+        culturaSet.add(cultura);
+      }
     }
 
+    const errorMessages: string[] = [];
+
     if (invalidCulturas.length > 0) {
-      throw new AppError(`Culturas inválidas: ${invalidCulturas.join(', ')}`, 400);
+      errorMessages.push(`Culturas inválidas: ${invalidCulturas.join(', ')}`);
+    }
+
+    if (duplicatedCulturas.length > 0) {
+      errorMessages.push(`Culturas repetidas: ${duplicatedCulturas.join(', ')}`);
+    }
+
+    if (errorMessages.length > 0) {
+      throw new AppError(errorMessages.join(' | '), 400);
     }
   }
 
