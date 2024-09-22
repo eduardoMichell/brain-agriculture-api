@@ -1,0 +1,47 @@
+{
+  "name": "brain-agriculture-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/app.js",
+    "dev": "ts-node-dev src/app.ts",
+    "migrate": "npx ts-node scripts/createTableProdutores.ts",
+    "seed": "npx ts-node scripts/seedProdutores.ts",
+    "docker:up": "docker-compose up --build",
+    "docker:down": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardoMichell/brain-agriculture-api.git"
+  },
+  "engines": {
+    "node": "=16.16.0",
+    "npm": "=8.11.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardoMichell/brain-agriculture-api/issues"
+  },
+  "homepage": "https://github.com/eduardoMichell/brain-agriculture-api#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "pg": "^8.13.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "@types/pg": "^8.11.10",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  }
+}

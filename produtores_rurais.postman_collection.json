@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "f8d6b6d7-c8a2-420b-8354-6486e73d3c4d",
+		"name": "Produtores Rurais API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Producer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cpf_cnpj\": \"12345678901\",\n  \"nome\": \"Produtor Teste\",\n  \"nome_fazenda\": \"Fazenda Teste\",\n  \"cidade\": \"Cidade X\",\n  \"estado\": \"SP\",\n  \"area_total\": 100,\n  \"area_agricultavel\": 80,\n  \"area_vegetacao\": 20,\n  \"culturas\": [\"Soja\", \"Milho\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/produtores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"produtores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Producers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/produtores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"produtores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Producer by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/produtores/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"produtores",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Producer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cpf_cnpj\": \"98765432100\",\n  \"nome\": \"Produtor Atualizado\",\n  \"nome_fazenda\": \"Fazenda Atualizada\",\n  \"cidade\": \"Cidade Y\",\n  \"estado\": \"MG\",\n  \"area_total\": 150,\n  \"area_agricultavel\": 100,\n  \"area_vegetacao\": 50,\n  \"culturas\": [\"Café\", \"Cana de Açúcar\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/produtores/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"produtores",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Producer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/produtores/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"produtores",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+        {
+            "name": "Get Dashboard Data",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/api/produtores/dashboard",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "api",
+				  "produtores",
+                  "dashboard"
+                ]
+              }
+            },
+            "response": []
+          }
+          
+	]
+}
