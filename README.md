@@ -1,7 +1,7 @@
 
 # Cadastro de Produtores Rurais - Backend - Brain Agriculture
 
-Este projeto faz parte de um teste de avaliação para a Brain Agriculture, onde o objetivo é criar a **API Backend** para o cadastro de produtores rurais. O projeto foi desenvolvido utilizando **NodeJS**, **TypeScript** e **PostgreSQL** como banco de dados. A API permite cadastrar, editar, excluir e listar produtores rurais, além de fornecer dados agregados para exibição em um dashboard.
+Este projeto faz parte de um teste de avaliação, onde o objetivo é criar a **API Backend** para o cadastro de produtores rurais. O projeto foi desenvolvido utilizando **NodeJS**, **TypeScript** e **PostgreSQL** como banco de dados. A API permite cadastrar, editar, excluir e listar produtores rurais, além de fornecer dados agregados para exibição em um dashboard.
 
 ## Versões Utilizadas
 
